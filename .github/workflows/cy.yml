@@ -2,11 +2,11 @@ name: End-to-end tests 🧪 #nome do pipeline
 on: [push] #disparado quando houver git push
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     steps:
-     - name: Cypress run
-        uses: cypress-io/github-action@v5
+      - name: Checkout
+        uses: actions/checkout@v2 
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v2
